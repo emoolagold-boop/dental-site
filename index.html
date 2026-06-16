@@ -90,6 +90,16 @@ button {
 }
 button:hover { background: var(--accent-dark); }
 .form-note { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+.success-message {
+  display: none;
+  background: #E8F5E8;
+  border: 1px solid #4CAF50;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 16px;
+  color: #2E7D32;
+  font-size: 16px;
+}
 footer {
   margin-top: 56px;
   padding-top: 24px;
@@ -132,22 +142,28 @@ footer p { margin: 4px 0; font-size: 13px; }
 <p>We connect dental professionals with screened SEIS-eligible investment opportunities (subject to HMRC advance assurance). Each opportunity comes with a full Technical Summary prepared for review by your accountant or financial adviser. You invest only after your adviser has confirmed the tax position.</p>
 
 <h2>Request an Information Pack</h2>
-<form action="mailto:gary.moore@dentalsupport.co.uk?subject=Information%20Pack%20Request" method="post" enctype="text/plain">
+<form id="enquiryForm" action="https://formspree.io/f/meewdjdl" method="POST">
 <label for="name">Name</label>
-<input type="text" id="name" name="Name" required autocomplete="name">
+<input type="text" id="name" name="name" required autocomplete="name">
 
 <label for="email">Email</label>
-<input type="email" id="email" name="Email" required autocomplete="email">
+<input type="email" id="email" name="email" required autocomplete="email">
 
 <label for="phone">Phone (optional)</label>
-<input type="tel" id="phone" name="Phone" autocomplete="tel">
+<input type="tel" id="phone" name="phone" autocomplete="tel">
 
 <label for="practice">Practice name</label>
-<input type="text" id="practice" name="Practice" required>
+<input type="text" id="practice" name="practice" required>
+
+<input type="hidden" name="_subject" value="New Information Pack Request — Dental Support">
 
 <button type="submit">Request Information</button>
 <p class="form-note">Your details are kept confidential and used only to send the requested information.</p>
 </form>
+
+<div class="success-message" id="successMessage">
+Thank you — your request has been received. We will be in touch shortly.
+</div>
 
 <footer>
 <p><strong>TCBT LTD</strong> &nbsp;&middot;&nbsp; Company No. 09043678 &nbsp;&middot;&nbsp; Established 2014</p>
@@ -156,5 +172,28 @@ footer p { margin: 4px 0; font-size: 13px; }
 </footer>
 
 </div>
+
+<script>
+document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var data = new FormData(form);
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(function(response) {
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    } else {
+      alert('There was a problem sending your request. Please try again or email us directly.');
+    }
+  }).catch(function() {
+    alert('There was a problem sending your request. Please try again or email us directly.');
+  });
+});
+</script>
+
 </body>
 </html>
