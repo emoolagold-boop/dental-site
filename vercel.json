@@ -1,1 +1,5 @@
-
+{
+  "redirects": [
+    { "source": "/seis", "destination": "/seis.html" }
+  ]
+}
