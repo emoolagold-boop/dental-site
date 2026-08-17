@@ -3,197 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tax-efficient SEIS investment information for UK dental professionals.">
-<title>Dental Support — Tax-Efficient Investment for Dental Professionals</title>
+<title>Dental Support — UK dental supply partner</title>
+<meta name="description" content="Dental Support sources quality dental equipment and consumables for UK practices. Part of TCBT Ltd, established 2014.">
 <style>
-:root {
-  --accent: #0F6B7A;
-  --accent-dark: #0A5562;
-  --text: #1A1A1A;
-  --muted: #555555;
-  --rule: #E5E7E9;
-  --bg: #FFFFFF;
-  --form-bg: #F7F9FA;
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-.container { max-width: 720px; margin: 0 auto; padding: 48px 24px 32px; }
-header { border-bottom: 3px solid var(--accent); padding-bottom: 20px; margin-bottom: 32px; }
-h1 {
-  font-size: 36px;
-  margin: 0 0 8px;
-  color: var(--accent);
-  letter-spacing: -0.4px;
-  font-weight: 700;
-}
-.subtitle { font-size: 17px; color: var(--muted); margin: 0; font-weight: 400; }
-h2 {
-  font-size: 19px;
-  margin: 36px 0 14px;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.2px;
-}
-p { margin: 0 0 14px; font-size: 16px; }
-table { width: 100%; border-collapse: collapse; margin: 14px 0 16px; }
-td {
-  padding: 11px 12px;
-  border-bottom: 1px solid var(--rule);
-  font-size: 16px;
-  vertical-align: top;
-}
-td:first-child { color: var(--muted); }
-td:last-child { font-weight: 600; text-align: right; white-space: nowrap; }
-.note { font-size: 14px; color: var(--muted); margin: 4px 0 0; }
-form {
-  background: var(--form-bg);
-  padding: 24px;
-  border-radius: 6px;
-  margin-top: 16px;
-}
-label {
-  display: block;
-  font-size: 14px;
-  margin: 14px 0 6px;
-  color: var(--text);
-  font-weight: 500;
-}
-label:first-of-type { margin-top: 0; }
-input {
-  width: 100%;
-  padding: 11px 12px;
-  font-size: 16px;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  font-family: inherit;
-  background: white;
-}
-input:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
-button {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 12px 26px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 20px;
-  font-weight: 600;
-  font-family: inherit;
-}
-button:hover { background: var(--accent-dark); }
-.form-note { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
-.success-message {
-  display: none;
-  background: #E8F5E8;
-  border: 1px solid #4CAF50;
-  border-radius: 6px;
-  padding: 20px;
-  margin-top: 16px;
-  color: #2E7D32;
-  font-size: 16px;
-}
-footer {
-  margin-top: 56px;
-  padding-top: 24px;
-  border-top: 1px solid var(--rule);
-  font-size: 13px;
-  color: var(--muted);
-}
-footer p { margin: 4px 0; font-size: 13px; }
-@media (max-width: 600px) {
-  .container { padding: 32px 18px 24px; }
-  h1 { font-size: 28px; }
-  h2 { font-size: 17px; }
-  td { padding: 10px 8px; font-size: 15px; }
-  p, input, button { font-size: 15px; }
-}
+  :root {
+    --ink: #14282d;
+    --ink-soft: #3d5459;
+    --teal: #0f8a86;
+    --teal-deep: #0a6360;
+    --mist: #eef4f3;
+    --paper: #fbfdfc;
+    --line: #d8e4e2;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+  /* Utility face for labels/nav/small */
+  .u {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  /* ---- Header ---- */
+  header {
+    border-bottom: 1px solid var(--line);
+    background: rgba(251,253,252,0.9);
+    backdrop-filter: blur(8px);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+  .brand { display: flex; align-items: baseline; gap: 12px; }
+  .brand .mark {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700; font-size: 1.18rem; letter-spacing: -0.01em; color: var(--ink);
+  }
+  .brand .mark span { color: var(--teal); }
+  .brand .sub { color: var(--ink-soft); }
+  nav a {
+    color: var(--ink-soft); text-decoration: none; margin-left: 28px;
+    transition: color .2s;
+  }
+  nav a:hover { color: var(--teal-deep); }
+  nav { display: flex; align-items: center; }
+  .nav-links { display: flex; }
+  @media (max-width: 640px){ .nav-links { display: none; } }
+
+  /* ---- Hero ---- */
+  .hero { padding: 92px 0 76px; position: relative; }
+  .hero .eyebrow { color: var(--teal-deep); margin-bottom: 26px; }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5.4vw, 4rem);
+    line-height: 1.05; font-weight: 600; letter-spacing: -0.02em;
+    max-width: 15ch; margin-bottom: 28px;
+  }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+  .hero p.lead {
+    font-size: 1.24rem; color: var(--ink-soft); max-width: 52ch; margin-bottom: 40px;
+  }
+  .cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 600; font-size: 0.95rem;
+    padding: 15px 30px; border-radius: 2px; text-decoration: none; display: inline-block;
+    transition: transform .15s, background .2s, box-shadow .2s;
+  }
+  .btn-primary { background: var(--teal-deep); color: #fff; }
+  .btn-primary:hover { background: var(--ink); transform: translateY(-1px); box-shadow: 0 8px 22px rgba(10,99,96,0.22); }
+  .btn-ghost { color: var(--teal-deep); border: 1px solid var(--line); }
+  .btn-ghost:hover { border-color: var(--teal); background: var(--mist); }
+
+  /* thin clinical rule motif */
+  .rule-line {
+    height: 1px; background: linear-gradient(90deg, var(--teal) 0%, var(--line) 40%, transparent 100%);
+    margin: 0 0 0 0;
+  }
+
+  /* ---- Trust strip ---- */
+  .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); }
+  .trust .wrap { display: flex; flex-wrap: wrap; gap: 44px; padding-top: 30px; padding-bottom: 30px; }
+  .trust .item { display: flex; flex-direction: column; }
+  .trust .item .n {
+    font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700;
+    font-size: 1.5rem; color: var(--ink); letter-spacing: -0.01em;
+  }
+  .trust .item .l { color: var(--ink-soft); font-size: 0.9rem; }
+
+  /* ---- Sections ---- */
+  section { padding: 84px 0; }
+  .sec-label { color: var(--teal-deep); margin-bottom: 18px; }
+  h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 600; letter-spacing: -0.015em; max-width: 20ch; margin-bottom: 22px; line-height: 1.12; }
+  .sec-intro { color: var(--ink-soft); font-size: 1.12rem; max-width: 56ch; }
+
+  .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); margin-top: 52px; border: 1px solid var(--line); }
+  @media (max-width: 800px){ .offer-grid { grid-template-columns: 1fr; } }
+  .offer {
+    background: var(--paper); padding: 38px 32px; transition: background .25s;
+  }
+  .offer:hover { background: var(--mist); }
+  .offer .idx { color: var(--teal); font-family: "Helvetica Neue", Arial, sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.1em; }
+  .offer h3 { font-size: 1.28rem; font-weight: 600; margin: 16px 0 10px; letter-spacing: -0.01em; }
+  .offer p { color: var(--ink-soft); font-size: 0.98rem; }
+
+  /* ---- Approach (why us) ---- */
+  .approach { background: var(--ink); color: #dCEbe9; }
+  .approach h2 { color: #fff; }
+  .approach .sec-label { color: #5fb8b3; }
+  .approach .sec-intro { color: #a9c3c1; }
+  .app-list { margin-top: 48px; display: grid; grid-template-columns: repeat(2,1fr); gap: 40px 56px; }
+  @media (max-width: 720px){ .app-list { grid-template-columns: 1fr; } }
+  .app-item { border-top: 1px solid #2c4448; padding-top: 20px; }
+  .app-item h4 { font-family:"Helvetica Neue",Arial,sans-serif; font-size: 1.05rem; color:#fff; font-weight:600; margin-bottom: 8px; }
+  .app-item p { color: #9fbbb9; font-size: 0.98rem; }
+
+  /* ---- Contact ---- */
+  .contact { background: var(--mist); }
+  .contact-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 3px;
+    padding: 56px 48px; margin-top: 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px;
+  }
+  @media (max-width: 720px){ .contact-card { grid-template-columns: 1fr; padding: 36px 28px; } }
+  .contact-card h2 { margin-bottom: 14px; }
+  .contact-card .lead { color: var(--ink-soft); font-size: 1.08rem; }
+  .cfield { margin-bottom: 8px; }
+  .cfield .k { color: var(--teal-deep); }
+  .cfield .v { font-size: 1.1rem; color: var(--ink); }
+  .cfield .v a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--teal); padding-bottom: 1px; }
+  .cfield .v a:hover { color: var(--teal-deep); }
+  .cbox { display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+
+  /* ---- Footer ---- */
+  footer { background: var(--ink); color: #8fa9a7; padding: 44px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: flex-start; }
+  footer .fbrand { color: #fff; font-family:"Helvetica Neue",Arial,sans-serif; font-weight:700; }
+  footer .fbrand span { color: var(--teal); }
+  footer p { font-size: 0.85rem; max-width: 60ch; line-height: 1.7; }
+  footer a { color: #bcd2d0; }
+  .legal { font-size: 0.78rem; color: #6d8785; margin-top: 6px; }
+
+  ::selection { background: var(--teal); color: #fff; }
+  a:focus-visible, .btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce){ * { scroll-behavior: auto; transition: none !important; } }
 </style>
 </head>
 <body>
-<div class="container">
 
 <header>
-<h1>Dental Support</h1>
-<p class="subtitle">Tax-Efficient Investment for Dental Professionals</p>
+  <div class="wrap bar">
+    <div class="brand">
+      <span class="mark">Dental<span>Support</span></span>
+      <span class="u sub">TCBT Ltd</span>
+    </div>
+    <nav>
+      <div class="nav-links u">
+        <a href="#what">What we do</a>
+        <a href="#approach">Our approach</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
-<h2>The Opportunity</h2>
-<p>As a dental practice owner, you're likely paying 40% or 45% income tax on a significant portion of your earnings. The government's Seed Enterprise Investment Scheme (SEIS) allows you to invest up to £200,000 per year in qualifying UK companies and claim 50% of that investment back as income tax relief.</p>
-
-<h2>The Numbers</h2>
-<table>
-<tr><td>You invest</td><td>£50,000</td></tr>
-<tr><td>HMRC returns (50% income tax relief)</td><td>£25,000</td></tr>
-<tr><td>If held 3+ years: capital gains</td><td>£0 (exempt)</td></tr>
-<tr><td>If total loss: loss relief at 45%</td><td>£11,250</td></tr>
-<tr><td>Worst-case actual cost (additional rate)</td><td>£13,750</td></tr>
-</table>
-<p class="note">Your actual downside on a £50,000 investment is approximately £13,750 after all tax reliefs (assuming additional-rate taxpayer). Your accountant can confirm these figures for your individual circumstances.</p>
-
-<h2>How It Works</h2>
-<p>We connect dental professionals with screened SEIS-eligible investment opportunities (subject to HMRC advance assurance). Detailed information is available for your professional adviser on request, for review by your accountant or financial adviser. You invest only after your adviser has confirmed the tax position.</p>
-
-<h2>Request an Information Pack</h2>
-<form id="enquiryForm" action="https://formspree.io/f/meewdjdl" method="POST">
-<label for="name">Name</label>
-<input type="text" id="name" name="name" required autocomplete="name">
-
-<label for="email">Email</label>
-<input type="email" id="email" name="email" required autocomplete="email">
-
-<label for="phone">Phone (optional)</label>
-<input type="tel" id="phone" name="phone" autocomplete="tel">
-
-<label for="practice">Practice name</label>
-<input type="text" id="practice" name="practice" required>
-
-<input type="hidden" name="_subject" value="New Information Pack Request — Dental Support">
-
-<button type="submit">Request Information</button>
-<p class="form-note">Your details are kept confidential and used only to send the requested information.</p>
-</form>
-
-<div class="success-message" id="successMessage">
-Thank you — your request has been received. We will be in touch shortly.
+<div class="hero">
+  <div class="wrap">
+    <div class="u eyebrow">Supplying UK dental practices</div>
+    <h1>The dependable supply partner behind the <em>chair</em>.</h1>
+    <p class="lead">Dental Support helps UK practices source quality equipment and consumables — sensibly priced, properly documented, and backed by people who answer the phone.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-primary">Talk to us</a>
+      <a href="#what" class="btn btn-ghost">What we supply</a>
+    </div>
+  </div>
 </div>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="item"><span class="n">Est. 2014</span><span class="l">A UK company, not a marketplace</span></div>
+    <div class="item"><span class="n">UK-based</span><span class="l">Registered &amp; VAT-registered business</span></div>
+    <div class="item"><span class="n">Practice-first</span><span class="l">We supply clinics, not the public</span></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <div class="u sec-label">What we do</div>
+    <h2>A single supply partner, across the practice.</h2>
+    <p class="sec-intro">We bring together the equipment and consumables a modern practice runs on, and take the legwork out of sourcing them well. We only work with products intended to meet UK regulatory requirements — and we're candid about what we can and can't yet supply.</p>
+
+    <div class="offer-grid">
+      <div class="offer">
+        <div class="idx">01</div>
+        <h3>Equipment</h3>
+        <p>Surgery and treatment-room equipment sourced from established manufacturers, with the documentation UK practices need to buy with confidence.</p>
+      </div>
+      <div class="offer">
+        <div class="idx">02</div>
+        <h3>Consumables</h3>
+        <p>The day-to-day materials a practice gets through — supplied reliably, at prices that respect a clinic's margins.</p>
+      </div>
+      <div class="offer">
+        <div class="idx">03</div>
+        <h3>Practice essentials</h3>
+        <p>From sterilisation support to climate and comfort in the treatment room, we help with the wider kit that keeps a practice running.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach" class="approach">
+  <div class="wrap">
+    <div class="u sec-label">Our approach</div>
+    <h2>Sourcing you'd do yourself, if you had the time.</h2>
+    <p class="sec-intro">Buying well for a dental practice isn't about the lowest sticker price. It's about the right product, the right paperwork, and a supplier who's still there when you need them. That's the whole of our job.</p>
+
+    <div class="app-list">
+      <div class="app-item">
+        <h4>Compliance comes first</h4>
+        <p>Dental products are regulated for good reason. We prioritise supply that is intended to meet UK requirements, and we won't offer what we can't stand behind.</p>
+      </div>
+      <div class="app-item">
+        <h4>Quality before price</h4>
+        <p>We check the product, not just the quote. A cheaper item that fails in the surgery costs a practice far more than it saves.</p>
+      </div>
+      <div class="app-item">
+        <h4>Straight answers</h4>
+        <p>If something isn't right for you, we'll say so. A supplier that only ever says yes isn't a supplier worth having.</p>
+      </div>
+      <div class="app-item">
+        <h4>Built for the long term</h4>
+        <p>We'd rather earn a practice's repeat business than win a single order. Reliability is the product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div>
+        <div class="u sec-label">Contact</div>
+        <h2>Let's talk about your practice.</h2>
+        <p class="lead">Tell us what you're looking to source, or what's costing you too much today. We'll come back to you personally — no call centres, no automated runaround.</p>
+      </div>
+      <div class="cbox">
+        <div class="cfield">
+          <div class="u k">Email</div>
+          <div class="v"><a href="mailto:info@dentalsupport.co.uk">info@dentalsupport.co.uk</a></div>
+        </div>
+        <div class="cfield">
+          <div class="u k">Telephone</div>
+          <div class="v">+44 7920 570 747</div>
+        </div>
+        <div class="cfield">
+          <div class="u k">Web</div>
+          <div class="v">dentalsupport.co.uk</div>
+        </div>
+        <div class="cfield">
+          <div class="u k">Company</div>
+          <div class="v">TCBT Ltd &middot; Company No. 09043678</div>
+        </div>
+        <a href="mailto:info@dentalsupport.co.uk" class="btn btn-primary" style="margin-top:6px;">Start a conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
-<p><strong>TCBT LTD</strong> &nbsp;&middot;&nbsp; Company No. 09043678 &nbsp;&middot;&nbsp; Established 2014</p>
-<p>dentalsupport.co.uk</p>
-<p>This website does not constitute financial advice. SEIS tax relief is subject to HMRC rules and individual circumstances. Capital is at risk. Independent professional advice is recommended.</p>
+  <div class="wrap">
+    <div>
+      <div class="fbrand">Dental<span>Support</span></div>
+      <p class="legal">Dental Support is a trading name of TCBT Ltd, a company registered in England &amp; Wales, No. 09043678. Registered office: Aston House, Redburn Road, Newcastle upon Tyne, NE5 1NB. &copy; 2014&ndash;2026 TCBT Ltd. All rights reserved.</p>
+    </div>
+    <p>We supply dental practices and trade customers. Products are sourced to meet applicable UK regulatory requirements; specific certification and registration details are confirmed on a per-product basis.</p>
+  </div>
 </footer>
-
-</div>
-
-<script>
-document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = e.target;
-  var data = new FormData(form);
-  fetch(form.action, {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(function(response) {
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById('successMessage').style.display = 'block';
-    } else {
-      alert('There was a problem sending your request. Please try again or email us directly.');
-    }
-  }).catch(function() {
-    alert('There was a problem sending your request. Please try again or email us directly.');
-  });
-});
-</script>
 
 </body>
 </html>
